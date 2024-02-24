@@ -1,0 +1,9 @@
+{
+    "CellPrecision": 2,
+    "CrossbarH": 256,
+    "CrossbarW": 256,
+    "ChipH": 8,
+    "ChipW": 8,
+    "CoreH": 16,
+    "CoreW": 16
+}

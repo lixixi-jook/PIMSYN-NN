@@ -1,0 +1,1089 @@
+
+[
+	{
+		"bitwidth" : 16,
+		"consumer" : 
+		[
+			"input"
+		],
+		"consumer_num" : 1,
+		"index" : 0,
+		"name" : "input.1",
+		"operation" : "OP_INPUT",
+		"output_dim" : 
+		[
+			1,
+			3,
+			224,
+			224
+		],
+		"output_dim_num" : 4,
+		"provider_num" : 0
+	},
+	{
+		"bitwidth" : 16,
+		"consumer" : 
+		[
+			"ReLU_2"
+		],
+		"consumer_num" : 1,
+		"index" : 1,
+		"name" : "input",
+		"operation" : "OP_CONV",
+		"output_dim" : 
+		[
+			1,
+			64,
+			224,
+			224
+		],
+		"output_dim_num" : 4,
+		"param" : 
+		{
+			"dilation_h" : 1,
+			"dilation_w" : 1,
+			"group" : 1,
+			"input_channel" : 3,
+			"kernel_h" : 3,
+			"kernel_w" : 3,
+			"output_channel" : 64,
+			"pad_h0" : 1,
+			"pad_h1" : 1,
+			"pad_w0" : 1,
+			"pad_w1" : 1,
+			"stride_h" : 1,
+			"stride_w" : 1
+		},
+		"provider" : 
+		[
+			"input.1"
+		],
+		"provider_num" : 1
+	},
+	{
+		"bitwidth" : 16,
+		"consumer" : 
+		[
+			"input.4"
+		],
+		"consumer_num" : 1,
+		"index" : 2,
+		"name" : "ReLU_2",
+		"operation" : "OP_RELU",
+		"output_dim" : 
+		[
+			1,
+			64,
+			224,
+			224
+		],
+		"output_dim_num" : 4,
+		"param" : 
+		{
+			"negative_slope" : 0.0
+		},
+		"provider" : 
+		[
+			"input"
+		],
+		"provider_num" : 1
+	},
+	{
+		"bitwidth" : 16,
+		"consumer" : 
+		[
+			"ReLU_4"
+		],
+		"consumer_num" : 1,
+		"index" : 3,
+		"name" : "input.4",
+		"operation" : "OP_CONV",
+		"output_dim" : 
+		[
+			1,
+			64,
+			224,
+			224
+		],
+		"output_dim_num" : 4,
+		"param" : 
+		{
+			"dilation_h" : 1,
+			"dilation_w" : 1,
+			"group" : 1,
+			"input_channel" : 64,
+			"kernel_h" : 3,
+			"kernel_w" : 3,
+			"output_channel" : 64,
+			"pad_h0" : 1,
+			"pad_h1" : 1,
+			"pad_w0" : 1,
+			"pad_w1" : 1,
+			"stride_h" : 1,
+			"stride_w" : 1
+		},
+		"provider" : 
+		[
+			"ReLU_2"
+		],
+		"provider_num" : 1
+	},
+	{
+		"bitwidth" : 16,
+		"consumer" : 
+		[
+			"input.8"
+		],
+		"consumer_num" : 1,
+		"index" : 4,
+		"name" : "ReLU_4",
+		"operation" : "OP_RELU",
+		"output_dim" : 
+		[
+			1,
+			64,
+			224,
+			224
+		],
+		"output_dim_num" : 4,
+		"param" : 
+		{
+			"negative_slope" : 0.0
+		},
+		"provider" : 
+		[
+			"input.4"
+		],
+		"provider_num" : 1
+	},
+	{
+		"bitwidth" : 16,
+		"consumer" : 
+		[
+			"input.12"
+		],
+		"consumer_num" : 1,
+		"index" : 5,
+		"name" : "input.8",
+		"operation" : "OP_POOL",
+		"output_dim" : 
+		[
+			1,
+			64,
+			112,
+			112
+		],
+		"output_dim_num" : 4,
+		"param" : 
+		{
+			"kernel_h" : 2,
+			"kernel_w" : 2,
+			"pad_h0" : 0,
+			"pad_h1" : 0,
+			"pad_w0" : 0,
+			"pad_w1" : 0,
+			"pool_method" : 0,
+			"stride_h" : 2,
+			"stride_w" : 2
+		},
+		"provider" : 
+		[
+			"ReLU_4"
+		],
+		"provider_num" : 1
+	},
+	{
+		"bitwidth" : 16,
+		"consumer" : 
+		[
+			"ReLU_7"
+		],
+		"consumer_num" : 1,
+		"index" : 6,
+		"name" : "input.12",
+		"operation" : "OP_CONV",
+		"output_dim" : 
+		[
+			1,
+			128,
+			112,
+			112
+		],
+		"output_dim_num" : 4,
+		"param" : 
+		{
+			"dilation_h" : 1,
+			"dilation_w" : 1,
+			"group" : 1,
+			"input_channel" : 64,
+			"kernel_h" : 3,
+			"kernel_w" : 3,
+			"output_channel" : 128,
+			"pad_h0" : 1,
+			"pad_h1" : 1,
+			"pad_w0" : 1,
+			"pad_w1" : 1,
+			"stride_h" : 1,
+			"stride_w" : 1
+		},
+		"provider" : 
+		[
+			"input.8"
+		],
+		"provider_num" : 1
+	},
+	{
+		"bitwidth" : 16,
+		"consumer" : 
+		[
+			"input.16"
+		],
+		"consumer_num" : 1,
+		"index" : 7,
+		"name" : "ReLU_7",
+		"operation" : "OP_RELU",
+		"output_dim" : 
+		[
+			1,
+			128,
+			112,
+			112
+		],
+		"output_dim_num" : 4,
+		"param" : 
+		{
+			"negative_slope" : 0.0
+		},
+		"provider" : 
+		[
+			"input.12"
+		],
+		"provider_num" : 1
+	},
+	{
+		"bitwidth" : 16,
+		"consumer" : 
+		[
+			"ReLU_9"
+		],
+		"consumer_num" : 1,
+		"index" : 8,
+		"name" : "input.16",
+		"operation" : "OP_CONV",
+		"output_dim" : 
+		[
+			1,
+			128,
+			112,
+			112
+		],
+		"output_dim_num" : 4,
+		"param" : 
+		{
+			"dilation_h" : 1,
+			"dilation_w" : 1,
+			"group" : 1,
+			"input_channel" : 128,
+			"kernel_h" : 3,
+			"kernel_w" : 3,
+			"output_channel" : 128,
+			"pad_h0" : 1,
+			"pad_h1" : 1,
+			"pad_w0" : 1,
+			"pad_w1" : 1,
+			"stride_h" : 1,
+			"stride_w" : 1
+		},
+		"provider" : 
+		[
+			"ReLU_7"
+		],
+		"provider_num" : 1
+	},
+	{
+		"bitwidth" : 16,
+		"consumer" : 
+		[
+			"input.20"
+		],
+		"consumer_num" : 1,
+		"index" : 9,
+		"name" : "ReLU_9",
+		"operation" : "OP_RELU",
+		"output_dim" : 
+		[
+			1,
+			128,
+			112,
+			112
+		],
+		"output_dim_num" : 4,
+		"param" : 
+		{
+			"negative_slope" : 0.0
+		},
+		"provider" : 
+		[
+			"input.16"
+		],
+		"provider_num" : 1
+	},
+	{
+		"bitwidth" : 16,
+		"consumer" : 
+		[
+			"input.24"
+		],
+		"consumer_num" : 1,
+		"index" : 10,
+		"name" : "input.20",
+		"operation" : "OP_POOL",
+		"output_dim" : 
+		[
+			1,
+			128,
+			56,
+			56
+		],
+		"output_dim_num" : 4,
+		"param" : 
+		{
+			"kernel_h" : 2,
+			"kernel_w" : 2,
+			"pad_h0" : 0,
+			"pad_h1" : 0,
+			"pad_w0" : 0,
+			"pad_w1" : 0,
+			"pool_method" : 0,
+			"stride_h" : 2,
+			"stride_w" : 2
+		},
+		"provider" : 
+		[
+			"ReLU_9"
+		],
+		"provider_num" : 1
+	},
+	{
+		"bitwidth" : 16,
+		"consumer" : 
+		[
+			"ReLU_12"
+		],
+		"consumer_num" : 1,
+		"index" : 11,
+		"name" : "input.24",
+		"operation" : "OP_CONV",
+		"output_dim" : 
+		[
+			1,
+			256,
+			56,
+			56
+		],
+		"output_dim_num" : 4,
+		"param" : 
+		{
+			"dilation_h" : 1,
+			"dilation_w" : 1,
+			"group" : 1,
+			"input_channel" : 128,
+			"kernel_h" : 3,
+			"kernel_w" : 3,
+			"output_channel" : 256,
+			"pad_h0" : 1,
+			"pad_h1" : 1,
+			"pad_w0" : 1,
+			"pad_w1" : 1,
+			"stride_h" : 1,
+			"stride_w" : 1
+		},
+		"provider" : 
+		[
+			"input.20"
+		],
+		"provider_num" : 1
+	},
+	{
+		"bitwidth" : 16,
+		"consumer" : 
+		[
+			"input.28"
+		],
+		"consumer_num" : 1,
+		"index" : 12,
+		"name" : "ReLU_12",
+		"operation" : "OP_RELU",
+		"output_dim" : 
+		[
+			1,
+			256,
+			56,
+			56
+		],
+		"output_dim_num" : 4,
+		"param" : 
+		{
+			"negative_slope" : 0.0
+		},
+		"provider" : 
+		[
+			"input.24"
+		],
+		"provider_num" : 1
+	},
+	{
+		"bitwidth" : 16,
+		"consumer" : 
+		[
+			"ReLU_14"
+		],
+		"consumer_num" : 1,
+		"index" : 13,
+		"name" : "input.28",
+		"operation" : "OP_CONV",
+		"output_dim" : 
+		[
+			1,
+			256,
+			56,
+			56
+		],
+		"output_dim_num" : 4,
+		"param" : 
+		{
+			"dilation_h" : 1,
+			"dilation_w" : 1,
+			"group" : 1,
+			"input_channel" : 256,
+			"kernel_h" : 3,
+			"kernel_w" : 3,
+			"output_channel" : 256,
+			"pad_h0" : 1,
+			"pad_h1" : 1,
+			"pad_w0" : 1,
+			"pad_w1" : 1,
+			"stride_h" : 1,
+			"stride_w" : 1
+		},
+		"provider" : 
+		[
+			"ReLU_12"
+		],
+		"provider_num" : 1
+	},
+	{
+		"bitwidth" : 16,
+		"consumer" : 
+		[
+			"input.32"
+		],
+		"consumer_num" : 1,
+		"index" : 14,
+		"name" : "ReLU_14",
+		"operation" : "OP_RELU",
+		"output_dim" : 
+		[
+			1,
+			256,
+			56,
+			56
+		],
+		"output_dim_num" : 4,
+		"param" : 
+		{
+			"negative_slope" : 0.0
+		},
+		"provider" : 
+		[
+			"input.28"
+		],
+		"provider_num" : 1
+	},
+	{
+		"bitwidth" : 16,
+		"consumer" : 
+		[
+			"input.36"
+		],
+		"consumer_num" : 1,
+		"index" : 15,
+		"name" : "input.32",
+		"operation" : "OP_POOL",
+		"output_dim" : 
+		[
+			1,
+			256,
+			28,
+			28
+		],
+		"output_dim_num" : 4,
+		"param" : 
+		{
+			"kernel_h" : 2,
+			"kernel_w" : 2,
+			"pad_h0" : 0,
+			"pad_h1" : 0,
+			"pad_w0" : 0,
+			"pad_w1" : 0,
+			"pool_method" : 0,
+			"stride_h" : 2,
+			"stride_w" : 2
+		},
+		"provider" : 
+		[
+			"ReLU_14"
+		],
+		"provider_num" : 1
+	},
+	{
+		"bitwidth" : 16,
+		"consumer" : 
+		[
+			"ReLU_17"
+		],
+		"consumer_num" : 1,
+		"index" : 16,
+		"name" : "input.36",
+		"operation" : "OP_CONV",
+		"output_dim" : 
+		[
+			1,
+			512,
+			28,
+			28
+		],
+		"output_dim_num" : 4,
+		"param" : 
+		{
+			"dilation_h" : 1,
+			"dilation_w" : 1,
+			"group" : 1,
+			"input_channel" : 256,
+			"kernel_h" : 3,
+			"kernel_w" : 3,
+			"output_channel" : 512,
+			"pad_h0" : 1,
+			"pad_h1" : 1,
+			"pad_w0" : 1,
+			"pad_w1" : 1,
+			"stride_h" : 1,
+			"stride_w" : 1
+		},
+		"provider" : 
+		[
+			"input.32"
+		],
+		"provider_num" : 1
+	},
+	{
+		"bitwidth" : 16,
+		"consumer" : 
+		[
+			"input.40"
+		],
+		"consumer_num" : 1,
+		"index" : 17,
+		"name" : "ReLU_17",
+		"operation" : "OP_RELU",
+		"output_dim" : 
+		[
+			1,
+			512,
+			28,
+			28
+		],
+		"output_dim_num" : 4,
+		"param" : 
+		{
+			"negative_slope" : 0.0
+		},
+		"provider" : 
+		[
+			"input.36"
+		],
+		"provider_num" : 1
+	},
+	{
+		"bitwidth" : 16,
+		"consumer" : 
+		[
+			"ReLU_19"
+		],
+		"consumer_num" : 1,
+		"index" : 18,
+		"name" : "input.40",
+		"operation" : "OP_CONV",
+		"output_dim" : 
+		[
+			1,
+			512,
+			28,
+			28
+		],
+		"output_dim_num" : 4,
+		"param" : 
+		{
+			"dilation_h" : 1,
+			"dilation_w" : 1,
+			"group" : 1,
+			"input_channel" : 512,
+			"kernel_h" : 3,
+			"kernel_w" : 3,
+			"output_channel" : 512,
+			"pad_h0" : 1,
+			"pad_h1" : 1,
+			"pad_w0" : 1,
+			"pad_w1" : 1,
+			"stride_h" : 1,
+			"stride_w" : 1
+		},
+		"provider" : 
+		[
+			"ReLU_17"
+		],
+		"provider_num" : 1
+	},
+	{
+		"bitwidth" : 16,
+		"consumer" : 
+		[
+			"input.44"
+		],
+		"consumer_num" : 1,
+		"index" : 19,
+		"name" : "ReLU_19",
+		"operation" : "OP_RELU",
+		"output_dim" : 
+		[
+			1,
+			512,
+			28,
+			28
+		],
+		"output_dim_num" : 4,
+		"param" : 
+		{
+			"negative_slope" : 0.0
+		},
+		"provider" : 
+		[
+			"input.40"
+		],
+		"provider_num" : 1
+	},
+	{
+		"bitwidth" : 16,
+		"consumer" : 
+		[
+			"input.48"
+		],
+		"consumer_num" : 1,
+		"index" : 20,
+		"name" : "input.44",
+		"operation" : "OP_POOL",
+		"output_dim" : 
+		[
+			1,
+			512,
+			14,
+			14
+		],
+		"output_dim_num" : 4,
+		"param" : 
+		{
+			"kernel_h" : 2,
+			"kernel_w" : 2,
+			"pad_h0" : 0,
+			"pad_h1" : 0,
+			"pad_w0" : 0,
+			"pad_w1" : 0,
+			"pool_method" : 0,
+			"stride_h" : 2,
+			"stride_w" : 2
+		},
+		"provider" : 
+		[
+			"ReLU_19"
+		],
+		"provider_num" : 1
+	},
+	{
+		"bitwidth" : 16,
+		"consumer" : 
+		[
+			"ReLU_22"
+		],
+		"consumer_num" : 1,
+		"index" : 21,
+		"name" : "input.48",
+		"operation" : "OP_CONV",
+		"output_dim" : 
+		[
+			1,
+			512,
+			14,
+			14
+		],
+		"output_dim_num" : 4,
+		"param" : 
+		{
+			"dilation_h" : 1,
+			"dilation_w" : 1,
+			"group" : 1,
+			"input_channel" : 512,
+			"kernel_h" : 3,
+			"kernel_w" : 3,
+			"output_channel" : 512,
+			"pad_h0" : 1,
+			"pad_h1" : 1,
+			"pad_w0" : 1,
+			"pad_w1" : 1,
+			"stride_h" : 1,
+			"stride_w" : 1
+		},
+		"provider" : 
+		[
+			"input.44"
+		],
+		"provider_num" : 1
+	},
+	{
+		"bitwidth" : 16,
+		"consumer" : 
+		[
+			"input.52"
+		],
+		"consumer_num" : 1,
+		"index" : 22,
+		"name" : "ReLU_22",
+		"operation" : "OP_RELU",
+		"output_dim" : 
+		[
+			1,
+			512,
+			14,
+			14
+		],
+		"output_dim_num" : 4,
+		"param" : 
+		{
+			"negative_slope" : 0.0
+		},
+		"provider" : 
+		[
+			"input.48"
+		],
+		"provider_num" : 1
+	},
+	{
+		"bitwidth" : 16,
+		"consumer" : 
+		[
+			"ReLU_24"
+		],
+		"consumer_num" : 1,
+		"index" : 23,
+		"name" : "input.52",
+		"operation" : "OP_CONV",
+		"output_dim" : 
+		[
+			1,
+			512,
+			14,
+			14
+		],
+		"output_dim_num" : 4,
+		"param" : 
+		{
+			"dilation_h" : 1,
+			"dilation_w" : 1,
+			"group" : 1,
+			"input_channel" : 512,
+			"kernel_h" : 3,
+			"kernel_w" : 3,
+			"output_channel" : 512,
+			"pad_h0" : 1,
+			"pad_h1" : 1,
+			"pad_w0" : 1,
+			"pad_w1" : 1,
+			"stride_h" : 1,
+			"stride_w" : 1
+		},
+		"provider" : 
+		[
+			"ReLU_22"
+		],
+		"provider_num" : 1
+	},
+	{
+		"bitwidth" : 16,
+		"consumer" : 
+		[
+			"input.56"
+		],
+		"consumer_num" : 1,
+		"index" : 24,
+		"name" : "ReLU_24",
+		"operation" : "OP_RELU",
+		"output_dim" : 
+		[
+			1,
+			512,
+			14,
+			14
+		],
+		"output_dim_num" : 4,
+		"param" : 
+		{
+			"negative_slope" : 0.0
+		},
+		"provider" : 
+		[
+			"input.52"
+		],
+		"provider_num" : 1
+	},
+	{
+		"bitwidth" : 16,
+		"consumer" : 
+		[
+			"onnx::Flatten_52"
+		],
+		"consumer_num" : 1,
+		"index" : 25,
+		"name" : "input.56",
+		"operation" : "OP_POOL",
+		"output_dim" : 
+		[
+			1,
+			512,
+			7,
+			7
+		],
+		"output_dim_num" : 4,
+		"param" : 
+		{
+			"kernel_h" : 2,
+			"kernel_w" : 2,
+			"pad_h0" : 0,
+			"pad_h1" : 0,
+			"pad_w0" : 0,
+			"pad_w1" : 0,
+			"pool_method" : 0,
+			"stride_h" : 2,
+			"stride_w" : 2
+		},
+		"provider" : 
+		[
+			"ReLU_24"
+		],
+		"provider_num" : 1
+	},
+	{
+		"bitwidth" : 16,
+		"consumer" : 
+		[
+			"onnx::Gemm_53"
+		],
+		"consumer_num" : 1,
+		"index" : 26,
+		"name" : "onnx::Flatten_52",
+		"operation" : "OP_POOL",
+		"output_dim" : 
+		[
+			1,
+			512,
+			7,
+			7
+		],
+		"output_dim_num" : 4,
+		"param" : 
+		{
+			"kernel_h" : 1,
+			"kernel_w" : 1,
+			"pad_h0" : 0,
+			"pad_h1" : 0,
+			"pad_w0" : 0,
+			"pad_w1" : 0,
+			"pool_method" : 1,
+			"stride_h" : 1,
+			"stride_w" : 1
+		},
+		"provider" : 
+		[
+			"input.56"
+		],
+		"provider_num" : 1
+	},
+	{
+		"bitwidth" : 16,
+		"consumer" : 
+		[
+			"input.60"
+		],
+		"consumer_num" : 1,
+		"index" : 27,
+		"name" : "onnx::Gemm_53",
+		"operation" : "OP_FLATTEN",
+		"output_dim" : 
+		[
+			1,
+			25088,
+			1,
+			1
+		],
+		"output_dim_num" : 4,
+		"param" : 
+		{
+			"axis" : 1,
+			"end_axis" : 3
+		},
+		"provider" : 
+		[
+			"onnx::Flatten_52"
+		],
+		"provider_num" : 1
+	},
+	{
+		"bitwidth" : 16,
+		"consumer" : 
+		[
+			"onnx::Gemm_55"
+		],
+		"consumer_num" : 1,
+		"index" : 28,
+		"name" : "input.60",
+		"operation" : "OP_FC",
+		"output_dim" : 
+		[
+			1,
+			4096,
+			1,
+			1
+		],
+		"output_dim_num" : 4,
+		"param" : 
+		{
+			"input_channel" : 25088,
+			"output_channel" : 4096
+		},
+		"provider" : 
+		[
+			"onnx::Gemm_53"
+		],
+		"provider_num" : 1
+	},
+	{
+		"bitwidth" : 16,
+		"consumer" : 
+		[
+			"input.64"
+		],
+		"consumer_num" : 1,
+		"index" : 29,
+		"name" : "onnx::Gemm_55",
+		"operation" : "OP_RELU",
+		"output_dim" : 
+		[
+			1,
+			4096,
+			1,
+			1
+		],
+		"output_dim_num" : 4,
+		"param" : 
+		{
+			"negative_slope" : 0.0
+		},
+		"provider" : 
+		[
+			"input.60"
+		],
+		"provider_num" : 1
+	},
+	{
+		"bitwidth" : 16,
+		"consumer" : 
+		[
+			"onnx::Gemm_57"
+		],
+		"consumer_num" : 1,
+		"index" : 30,
+		"name" : "input.64",
+		"operation" : "OP_FC",
+		"output_dim" : 
+		[
+			1,
+			4096,
+			1,
+			1
+		],
+		"output_dim_num" : 4,
+		"param" : 
+		{
+			"input_channel" : 4096,
+			"output_channel" : 4096
+		},
+		"provider" : 
+		[
+			"onnx::Gemm_55"
+		],
+		"provider_num" : 1
+	},
+	{
+		"bitwidth" : 16,
+		"consumer" : 
+		[
+			"58"
+		],
+		"consumer_num" : 1,
+		"index" : 31,
+		"name" : "onnx::Gemm_57",
+		"operation" : "OP_RELU",
+		"output_dim" : 
+		[
+			1,
+			4096,
+			1,
+			1
+		],
+		"output_dim_num" : 4,
+		"param" : 
+		{
+			"negative_slope" : 0.0
+		},
+		"provider" : 
+		[
+			"input.64"
+		],
+		"provider_num" : 1
+	},
+	{
+		"bitwidth" : 16,
+		"consumer" : [],
+		"consumer_num" : 0,
+		"index" : 32,
+		"name" : "58",
+		"operation" : "OP_FC",
+		"output_dim" : 
+		[
+			1,
+			1000,
+			1,
+			1
+		],
+		"output_dim_num" : 4,
+		"param" : 
+		{
+			"input_channel" : 4096,
+			"output_channel" : 1000
+		},
+		"provider" : 
+		[
+			"onnx::Gemm_57"
+		],
+		"provider_num" : 1
+	}
+]
+

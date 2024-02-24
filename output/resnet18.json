@@ -1,0 +1,248 @@
+{
+    "rram_ratio": 0.15,
+    "rram_res": 2,
+    "xbar_size": 256,
+    "power_efficiency": 348.998233094338,
+    "dac_res": 1,
+    "adc_res": 9,
+    "macro_h": 11,
+    "macro_w": 10,
+    "spm_capacity": 128,
+    "/conv1/Conv_output_0": {
+        "duplication": 65,
+        "macro_num": 3,
+        "macro_sharing": "None",
+        "macro_size": 267,
+        "ADC": 423,
+        "SHIFTADD": 53,
+        "ADDITION": 1
+    },
+    "/maxpool/MaxPool_output_0": {
+        "duplication": 17,
+        "POOL": 7
+    },
+    "/layer1/layer1.0/conv1/Conv_output_0": {
+        "duplication": 70,
+        "macro_num": 6,
+        "macro_sharing": "None",
+        "macro_size": 108,
+        "ADC": 683,
+        "SHIFTADD": 86,
+        "ADDITION": 1
+    },
+    "/layer1/layer1.0/conv2/Conv_output_0": {
+        "duplication": 27,
+        "macro_num": 2,
+        "macro_sharing": "None",
+        "macro_size": 324,
+        "ADC": 790,
+        "SHIFTADD": 99,
+        "ADDITION": 1
+    },
+    "/layer1/layer1.0/Add_output_0": {
+        "duplication": 17,
+        "ELTWISE": 2,
+        "RELU": 2
+    },
+    "/layer1/layer1.1/conv1/Conv_output_0": {
+        "duplication": 25,
+        "macro_num": 3,
+        "macro_sharing": "None",
+        "macro_size": 200,
+        "ADC": 488,
+        "SHIFTADD": 61,
+        "ADDITION": 1
+    },
+    "/layer1/layer1.1/conv2/Conv_output_0": {
+        "duplication": 24,
+        "macro_num": 3,
+        "macro_sharing": "None",
+        "macro_size": 192,
+        "ADC": 468,
+        "SHIFTADD": 59,
+        "ADDITION": 1
+    },
+    "/layer1/layer1.1/Add_output_0": {
+        "duplication": 17,
+        "ELTWISE": 2,
+        "RELU": 2
+    },
+    "/layer2/layer2.0/conv1/Conv_output_0": {
+        "duplication": 5,
+        "macro_num": 2,
+        "macro_sharing": "None",
+        "macro_size": 72,
+        "ADC": 147,
+        "SHIFTADD": 19,
+        "ADDITION": 1
+    },
+    "/layer2/layer2.0/conv2/Conv_output_0": {
+        "duplication": 7,
+        "macro_num": 5,
+        "macro_sharing": "None",
+        "macro_size": 64,
+        "ADC": 137,
+        "SHIFTADD": 18,
+        "ADDITION": 1
+    },
+    "/layer2/layer2.0/downsample/downsample.0/Conv_output_0": {
+        "duplication": 8,
+        "macro_num": 1,
+        "macro_sharing": "None",
+        "macro_size": 64,
+        "ADC": 156,
+        "SHIFTADD": 20,
+        "ADDITION": 1
+    },
+    "/layer2/layer2.0/Add_output_0": {
+        "duplication": 4,
+        "ELTWISE": 1,
+        "RELU": 1
+    },
+    "/layer2/layer2.1/conv1/Conv_output_0": {
+        "duplication": 4,
+        "macro_num": 5,
+        "macro_sharing": "None",
+        "macro_size": 56,
+        "ADC": 78,
+        "SHIFTADD": 10,
+        "ADDITION": 1
+    },
+    "/layer2/layer2.1/conv2/Conv_output_0": {
+        "duplication": 5,
+        "macro_num": 7,
+        "macro_sharing": "None",
+        "macro_size": 58,
+        "ADC": 70,
+        "SHIFTADD": 9,
+        "ADDITION": 1
+    },
+    "/layer2/layer2.1/Add_output_0": {
+        "duplication": 4,
+        "ELTWISE": 1,
+        "RELU": 1
+    },
+    "/layer3/layer3.0/conv1/Conv_output_0": {
+        "duplication": 1,
+        "macro_num": 10,
+        "macro_sharing": "None",
+        "macro_size": 8,
+        "ADC": 10,
+        "SHIFTADD": 2,
+        "ADDITION": 1
+    },
+    "/layer3/layer3.0/conv2/Conv_output_0": {
+        "duplication": 1,
+        "macro_num": 2,
+        "macro_sharing": "None",
+        "macro_size": 108,
+        "ADC": 88,
+        "SHIFTADD": 11,
+        "ADDITION": 1
+    },
+    "/layer3/layer3.0/downsample/downsample.0/Conv_output_0": {
+        "duplication": 1,
+        "macro_num": 1,
+        "macro_sharing": "None",
+        "macro_size": 40,
+        "ADC": 20,
+        "SHIFTADD": 3,
+        "ADDITION": 1
+    },
+    "/layer3/layer3.0/Add_output_0": {
+        "duplication": 1,
+        "ELTWISE": 1,
+        "RELU": 1
+    },
+    "/layer3/layer3.1/conv1/Conv_output_0": {
+        "duplication": 1,
+        "macro_num": 3,
+        "macro_sharing": "None",
+        "macro_size": 48,
+        "ADC": 59,
+        "SHIFTADD": 8,
+        "ADDITION": 1
+    },
+    "/layer3/layer3.1/conv2/Conv_output_0": {
+        "duplication": 1,
+        "macro_num": 18,
+        "macro_sharing": "None",
+        "macro_size": 8,
+        "ADC": 10,
+        "SHIFTADD": 2,
+        "ADDITION": 1
+    },
+    "/layer3/layer3.1/Add_output_0": {
+        "duplication": 1,
+        "ELTWISE": 1,
+        "RELU": 1
+    },
+    "/layer4/layer4.0/conv1/Conv_output_0": {
+        "duplication": 1,
+        "macro_num": 1,
+        "macro_sharing": "None",
+        "macro_size": 144,
+        "ADC": 351,
+        "SHIFTADD": 44,
+        "ADDITION": 1
+    },
+    "/layer4/layer4.0/conv2/Conv_output_0": {
+        "duplication": 1,
+        "macro_num": 18,
+        "macro_sharing": "None",
+        "macro_size": 16,
+        "ADC": 39,
+        "SHIFTADD": 5,
+        "ADDITION": 1
+    },
+    "/layer4/layer4.0/downsample/downsample.0/Conv_output_0": {
+        "duplication": 1,
+        "macro_num": 1,
+        "macro_sharing": "None",
+        "macro_size": 16,
+        "ADC": 39,
+        "SHIFTADD": 5,
+        "ADDITION": 1
+    },
+    "/layer4/layer4.0/Add_output_0": {
+        "duplication": 1,
+        "ELTWISE": 1,
+        "RELU": 1
+    },
+    "/layer4/layer4.1/conv1/Conv_output_0": {
+        "duplication": 1,
+        "macro_num": 3,
+        "macro_sharing": "None",
+        "macro_size": 96,
+        "ADC": 234,
+        "SHIFTADD": 30,
+        "ADDITION": 1
+    },
+    "/layer4/layer4.1/conv2/Conv_output_0": {
+        "duplication": 1,
+        "macro_num": 9,
+        "macro_sharing": "None",
+        "macro_size": 32,
+        "ADC": 78,
+        "SHIFTADD": 10,
+        "ADDITION": 1
+    },
+    "/layer4/layer4.1/Add_output_0": {
+        "duplication": 1,
+        "ELTWISE": 1,
+        "RELU": 1
+    },
+    "/avgpool/GlobalAveragePool_output_0": {
+        "duplication": 1,
+        "POOL": 4
+    },
+    "191": {
+        "duplication": 1,
+        "macro_num": 2,
+        "macro_sharing": "None",
+        "macro_size": 32,
+        "ADC": 1,
+        "SHIFTADD": 1,
+        "ADDITION": 1
+    }
+}

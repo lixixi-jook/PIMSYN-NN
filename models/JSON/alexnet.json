@@ -1,0 +1,648 @@
+[
+    {
+        "bitwidth": 16,
+        "consumer": [
+            "/features/features.0/Conv_output_0"
+        ],
+        "consumer_num": 1,
+        "index": 0,
+        "name": "x",
+        "operation": "OP_INPUT",
+        "output_dim": [
+            1,
+            3,
+            224,
+            224
+        ],
+        "output_dim_num": 4,
+        "provider_num": 0,
+        "new_node_index": 0,
+        "consumer_index": [
+            1
+        ],
+        "provider_index": []
+    },
+    {
+        "act_type": 0,
+        "bitwidth": 16,
+        "clip_max": 10000000,
+        "clip_min": -10000000,
+        "consumer": [
+            "/features/features.2/MaxPool_output_0"
+        ],
+        "consumer_num": 1,
+        "index": 1,
+        "name": "/features/features.0/Conv_output_0",
+        "operation": "OP_CONV",
+        "output_dim": [
+            1,
+            64,
+            55,
+            55
+        ],
+        "output_dim_num": 4,
+        "param": {
+            "dilation_h": 1,
+            "dilation_w": 1,
+            "group": 1,
+            "input_channel": 3,
+            "kernel_h": 11,
+            "kernel_w": 11,
+            "output_channel": 64,
+            "pad_h0": 2,
+            "pad_h1": 2,
+            "pad_w0": 2,
+            "pad_w1": 2,
+            "stride_h": 4,
+            "stride_w": 4,
+            "with_bias": 1
+        },
+        "provider": [
+            "x"
+        ],
+        "provider_num": 1,
+        "with_act": 1,
+        "with_bn": 0,
+        "with_clip": 0,
+        "input_dim_num": 4,
+        "input_dim": [
+            1,
+            3,
+            224,
+            224
+        ],
+        "new_node_index": 1,
+        "consumer_index": [
+            2
+        ],
+        "provider_index": [
+            0
+        ]
+    },
+    {
+        "bitwidth": 16,
+        "consumer": [
+            "/features/features.3/Conv_output_0"
+        ],
+        "consumer_num": 1,
+        "index": 2,
+        "name": "/features/features.2/MaxPool_output_0",
+        "operation": "OP_POOL",
+        "output_dim": [
+            1,
+            64,
+            27,
+            27
+        ],
+        "output_dim_num": 4,
+        "param": {
+            "global": 0,
+            "kernel_h": 3,
+            "kernel_w": 3,
+            "pad_h0": 0,
+            "pad_h1": 0,
+            "pad_w0": 0,
+            "pad_w1": 0,
+            "pool_method": 0,
+            "stride_h": 2,
+            "stride_w": 2
+        },
+        "provider": [
+            "/features/features.0/Conv_output_0"
+        ],
+        "provider_num": 1,
+        "input_dim_num": 4,
+        "input_dim": [
+            1,
+            64,
+            55,
+            55
+        ],
+        "new_node_index": 2,
+        "consumer_index": [
+            3
+        ],
+        "provider_index": [
+            1
+        ]
+    },
+    {
+        "act_type": 0,
+        "bitwidth": 16,
+        "clip_max": 10000000,
+        "clip_min": -10000000,
+        "consumer": [
+            "/features/features.5/MaxPool_output_0"
+        ],
+        "consumer_num": 1,
+        "index": 3,
+        "name": "/features/features.3/Conv_output_0",
+        "operation": "OP_CONV",
+        "output_dim": [
+            1,
+            192,
+            27,
+            27
+        ],
+        "output_dim_num": 4,
+        "param": {
+            "dilation_h": 1,
+            "dilation_w": 1,
+            "group": 1,
+            "input_channel": 64,
+            "kernel_h": 5,
+            "kernel_w": 5,
+            "output_channel": 192,
+            "pad_h0": 2,
+            "pad_h1": 2,
+            "pad_w0": 2,
+            "pad_w1": 2,
+            "stride_h": 1,
+            "stride_w": 1,
+            "with_bias": 1
+        },
+        "provider": [
+            "/features/features.2/MaxPool_output_0"
+        ],
+        "provider_num": 1,
+        "with_act": 1,
+        "with_bn": 0,
+        "with_clip": 0,
+        "input_dim_num": 4,
+        "input_dim": [
+            1,
+            64,
+            27,
+            27
+        ],
+        "new_node_index": 3,
+        "consumer_index": [
+            4
+        ],
+        "provider_index": [
+            2
+        ]
+    },
+    {
+        "bitwidth": 16,
+        "consumer": [
+            "/features/features.6/Conv_output_0"
+        ],
+        "consumer_num": 1,
+        "index": 4,
+        "name": "/features/features.5/MaxPool_output_0",
+        "operation": "OP_POOL",
+        "output_dim": [
+            1,
+            192,
+            13,
+            13
+        ],
+        "output_dim_num": 4,
+        "param": {
+            "global": 0,
+            "kernel_h": 3,
+            "kernel_w": 3,
+            "pad_h0": 0,
+            "pad_h1": 0,
+            "pad_w0": 0,
+            "pad_w1": 0,
+            "pool_method": 0,
+            "stride_h": 2,
+            "stride_w": 2
+        },
+        "provider": [
+            "/features/features.3/Conv_output_0"
+        ],
+        "provider_num": 1,
+        "input_dim_num": 4,
+        "input_dim": [
+            1,
+            192,
+            27,
+            27
+        ],
+        "new_node_index": 4,
+        "consumer_index": [
+            5
+        ],
+        "provider_index": [
+            3
+        ]
+    },
+    {
+        "act_type": 0,
+        "bitwidth": 16,
+        "clip_max": 10000000,
+        "clip_min": -10000000,
+        "consumer": [
+            "/features/features.8/Conv_output_0"
+        ],
+        "consumer_num": 1,
+        "index": 5,
+        "name": "/features/features.6/Conv_output_0",
+        "operation": "OP_CONV",
+        "output_dim": [
+            1,
+            384,
+            13,
+            13
+        ],
+        "output_dim_num": 4,
+        "param": {
+            "dilation_h": 1,
+            "dilation_w": 1,
+            "group": 1,
+            "input_channel": 192,
+            "kernel_h": 3,
+            "kernel_w": 3,
+            "output_channel": 384,
+            "pad_h0": 1,
+            "pad_h1": 1,
+            "pad_w0": 1,
+            "pad_w1": 1,
+            "stride_h": 1,
+            "stride_w": 1,
+            "with_bias": 1
+        },
+        "provider": [
+            "/features/features.5/MaxPool_output_0"
+        ],
+        "provider_num": 1,
+        "with_act": 1,
+        "with_bn": 0,
+        "with_clip": 0,
+        "input_dim_num": 4,
+        "input_dim": [
+            1,
+            192,
+            13,
+            13
+        ],
+        "new_node_index": 5,
+        "consumer_index": [
+            6
+        ],
+        "provider_index": [
+            4
+        ]
+    },
+    {
+        "act_type": 0,
+        "bitwidth": 16,
+        "clip_max": 10000000,
+        "clip_min": -10000000,
+        "consumer": [
+            "/features/features.10/Conv_output_0"
+        ],
+        "consumer_num": 1,
+        "index": 6,
+        "name": "/features/features.8/Conv_output_0",
+        "operation": "OP_CONV",
+        "output_dim": [
+            1,
+            256,
+            13,
+            13
+        ],
+        "output_dim_num": 4,
+        "param": {
+            "dilation_h": 1,
+            "dilation_w": 1,
+            "group": 1,
+            "input_channel": 384,
+            "kernel_h": 3,
+            "kernel_w": 3,
+            "output_channel": 256,
+            "pad_h0": 1,
+            "pad_h1": 1,
+            "pad_w0": 1,
+            "pad_w1": 1,
+            "stride_h": 1,
+            "stride_w": 1,
+            "with_bias": 1
+        },
+        "provider": [
+            "/features/features.6/Conv_output_0"
+        ],
+        "provider_num": 1,
+        "with_act": 1,
+        "with_bn": 0,
+        "with_clip": 0,
+        "input_dim_num": 4,
+        "input_dim": [
+            1,
+            384,
+            13,
+            13
+        ],
+        "new_node_index": 6,
+        "consumer_index": [
+            7
+        ],
+        "provider_index": [
+            5
+        ]
+    },
+    {
+        "act_type": 0,
+        "bitwidth": 16,
+        "clip_max": 10000000,
+        "clip_min": -10000000,
+        "consumer": [
+            "/features/features.12/MaxPool_output_0"
+        ],
+        "consumer_num": 1,
+        "index": 7,
+        "name": "/features/features.10/Conv_output_0",
+        "operation": "OP_CONV",
+        "output_dim": [
+            1,
+            256,
+            13,
+            13
+        ],
+        "output_dim_num": 4,
+        "param": {
+            "dilation_h": 1,
+            "dilation_w": 1,
+            "group": 1,
+            "input_channel": 256,
+            "kernel_h": 3,
+            "kernel_w": 3,
+            "output_channel": 256,
+            "pad_h0": 1,
+            "pad_h1": 1,
+            "pad_w0": 1,
+            "pad_w1": 1,
+            "stride_h": 1,
+            "stride_w": 1,
+            "with_bias": 1
+        },
+        "provider": [
+            "/features/features.8/Conv_output_0"
+        ],
+        "provider_num": 1,
+        "with_act": 1,
+        "with_bn": 0,
+        "with_clip": 0,
+        "input_dim_num": 4,
+        "input_dim": [
+            1,
+            256,
+            13,
+            13
+        ],
+        "new_node_index": 7,
+        "consumer_index": [
+            8
+        ],
+        "provider_index": [
+            6
+        ]
+    },
+    {
+        "bitwidth": 16,
+        "consumer": [
+            "/avgpool/AveragePool_output_0"
+        ],
+        "consumer_num": 1,
+        "index": 8,
+        "name": "/features/features.12/MaxPool_output_0",
+        "operation": "OP_POOL",
+        "output_dim": [
+            1,
+            256,
+            6,
+            6
+        ],
+        "output_dim_num": 4,
+        "param": {
+            "global": 0,
+            "kernel_h": 3,
+            "kernel_w": 3,
+            "pad_h0": 0,
+            "pad_h1": 0,
+            "pad_w0": 0,
+            "pad_w1": 0,
+            "pool_method": 0,
+            "stride_h": 2,
+            "stride_w": 2
+        },
+        "provider": [
+            "/features/features.10/Conv_output_0"
+        ],
+        "provider_num": 1,
+        "input_dim_num": 4,
+        "input_dim": [
+            1,
+            256,
+            13,
+            13
+        ],
+        "new_node_index": 8,
+        "consumer_index": [
+            9
+        ],
+        "provider_index": [
+            7
+        ]
+    },
+    {
+        "bitwidth": 16,
+        "consumer": [
+            "/Flatten_output_0"
+        ],
+        "consumer_num": 1,
+        "index": 9,
+        "name": "/avgpool/AveragePool_output_0",
+        "operation": "OP_POOL",
+        "output_dim": [
+            1,
+            256,
+            6,
+            6
+        ],
+        "output_dim_num": 4,
+        "param": {
+            "global": 0,
+            "kernel_h": 1,
+            "kernel_w": 1,
+            "pool_method": 1,
+            "stride_h": 1,
+            "stride_w": 1
+        },
+        "provider": [
+            "/features/features.12/MaxPool_output_0"
+        ],
+        "provider_num": 1,
+        "input_dim_num": 4,
+        "input_dim": [
+            1,
+            256,
+            6,
+            6
+        ],
+        "new_node_index": 9,
+        "consumer_index": [
+            10
+        ],
+        "provider_index": [
+            8
+        ]
+    },
+    {
+        "bitwidth": 16,
+        "consumer": [
+            "/classifier/classifier.1/Gemm_output_0"
+        ],
+        "consumer_num": 1,
+        "index": 10,
+        "name": "/Flatten_output_0",
+        "operation": "OP_FLATTEN",
+        "output_dim": [
+            1,
+            9216
+        ],
+        "output_dim_num": 2,
+        "provider": [
+            "/avgpool/AveragePool_output_0"
+        ],
+        "provider_num": 1,
+        "input_dim_num": 4,
+        "input_dim": [
+            1,
+            256,
+            6,
+            6
+        ],
+        "new_node_index": 10,
+        "consumer_index": [
+            11
+        ],
+        "provider_index": [
+            9
+        ]
+    },
+    {
+        "act_type": 0,
+        "bitwidth": 16,
+        "clip_max": 10000000,
+        "clip_min": -10000000,
+        "consumer": [
+            "/classifier/classifier.4/Gemm_output_0"
+        ],
+        "consumer_num": 1,
+        "index": 11,
+        "name": "/classifier/classifier.1/Gemm_output_0",
+        "operation": "OP_FC",
+        "output_dim": [
+            1,
+            4096
+        ],
+        "output_dim_num": 2,
+        "param": {
+            "input_channel": 9216,
+            "output_channel": 4096,
+            "with_bias": 1
+        },
+        "provider": [
+            "/Flatten_output_0"
+        ],
+        "provider_num": 1,
+        "with_act": 1,
+        "with_bn": 0,
+        "with_clip": 0,
+        "input_dim_num": 2,
+        "input_dim": [
+            1,
+            9216
+        ],
+        "new_node_index": 11,
+        "consumer_index": [
+            12
+        ],
+        "provider_index": [
+            10
+        ]
+    },
+    {
+        "act_type": 0,
+        "bitwidth": 16,
+        "clip_max": 10000000,
+        "clip_min": -10000000,
+        "consumer": [
+            "36"
+        ],
+        "consumer_num": 1,
+        "index": 12,
+        "name": "/classifier/classifier.4/Gemm_output_0",
+        "operation": "OP_FC",
+        "output_dim": [
+            1,
+            4096
+        ],
+        "output_dim_num": 2,
+        "param": {
+            "input_channel": 4096,
+            "output_channel": 4096,
+            "with_bias": 1
+        },
+        "provider": [
+            "/classifier/classifier.1/Gemm_output_0"
+        ],
+        "provider_num": 1,
+        "with_act": 1,
+        "with_bn": 0,
+        "with_clip": 0,
+        "input_dim_num": 2,
+        "input_dim": [
+            1,
+            4096
+        ],
+        "new_node_index": 12,
+        "consumer_index": [
+            13
+        ],
+        "provider_index": [
+            11
+        ]
+    },
+    {
+        "act_type": -1,
+        "bitwidth": 16,
+        "clip_max": 10000000,
+        "clip_min": -10000000,
+        "consumer_num": 0,
+        "index": 13,
+        "name": "36",
+        "operation": "OP_FC",
+        "output_dim": [
+            1,
+            1000
+        ],
+        "output_dim_num": 2,
+        "param": {
+            "input_channel": 4096,
+            "output_channel": 1000,
+            "with_bias": 1
+        },
+        "provider": [
+            "/classifier/classifier.4/Gemm_output_0"
+        ],
+        "provider_num": 1,
+        "with_act": 0,
+        "with_bn": 0,
+        "with_clip": 0,
+        "input_dim_num": 2,
+        "input_dim": [
+            1,
+            4096
+        ],
+        "new_node_index": 13,
+        "consumer_index": [],
+        "provider_index": [
+            12
+        ]
+    }
+]

@@ -1,0 +1,2 @@
+models/ONNX/alexnet.onnx filter=lfs diff=lfs merge=lfs -text
+models/ONNX/resnet18.onnx filter=lfs diff=lfs merge=lfs -text

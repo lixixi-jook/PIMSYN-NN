@@ -1,0 +1,99 @@
+{
+    "rram_ratio": 0.3,
+    "rram_res": 2,
+    "xbar_size": 256,
+    "power_efficiency": 572.3071531441486,
+    "dac_res": 1,
+    "adc_res": 9,
+    "macro_h": 8,
+    "macro_w": 8,
+    "spm_capacity": 64,
+    "/features/features.0/Conv_output_0": {
+        "duplication": 119,
+        "macro_num": 11,
+        "macro_sharing": "None",
+        "macro_size": 256,
+        "ADC": 432,
+        "SHIFTADD": 54,
+        "ADDITION": 1
+    },
+    "/features/features.2/MaxPool_output_0": {
+        "duplication": 26,
+        "POOL": 11
+    },
+    "/features/features.3/Conv_output_0": {
+        "duplication": 26,
+        "macro_num": 10,
+        "macro_sharing": "None",
+        "macro_size": 256,
+        "ADC": 432,
+        "SHIFTADD": 54,
+        "ADDITION": 1
+    },
+    "/features/features.5/MaxPool_output_0": {
+        "duplication": 6,
+        "POOL": 11
+    },
+    "/features/features.6/Conv_output_0": {
+        "duplication": 6,
+        "macro_num": 5,
+        "macro_sharing": "None",
+        "macro_size": 256,
+        "ADC": 432,
+        "SHIFTADD": 54,
+        "ADDITION": 1
+    },
+    "/features/features.8/Conv_output_0": {
+        "duplication": 6,
+        "macro_num": 5,
+        "macro_sharing": "None",
+        "macro_size": 256,
+        "ADC": 432,
+        "SHIFTADD": 54,
+        "ADDITION": 1
+    },
+    "/features/features.10/Conv_output_0": {
+        "duplication": 6,
+        "macro_num": 3,
+        "macro_sharing": "None",
+        "macro_size": 256,
+        "ADC": 432,
+        "SHIFTADD": 54,
+        "ADDITION": 1
+    },
+    "/features/features.12/MaxPool_output_0": {
+        "duplication": 2,
+        "POOL": 11
+    },
+    "/avgpool/AveragePool_output_0": {
+        "duplication": 2,
+        "POOL": 11
+    },
+    "/classifier/classifier.1/Gemm_output_0": {
+        "duplication": 1,
+        "macro_num": 18,
+        "macro_sharing": "None",
+        "macro_size": 256,
+        "ADC": 432,
+        "SHIFTADD": 54,
+        "ADDITION": 1
+    },
+    "/classifier/classifier.4/Gemm_output_0": {
+        "duplication": 1,
+        "macro_num": 8,
+        "macro_sharing": "None",
+        "macro_size": 256,
+        "ADC": 432,
+        "SHIFTADD": 54,
+        "ADDITION": 1
+    },
+    "36": {
+        "duplication": 1,
+        "macro_num": 4,
+        "macro_sharing": "None",
+        "macro_size": 256,
+        "ADC": 432,
+        "SHIFTADD": 54,
+        "ADDITION": 1
+    }
+}
