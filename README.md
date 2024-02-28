@@ -10,7 +10,7 @@ PIMSYN-NN requires users to input
 - ONNX-format CNN model
 - Total power constraint
 - Hardware setup parameters
-  
+
 Through a series of synthesis stages together with the integrated DSE flow, PIMSYN-NN automatically generates the architecture of a PIM-based accelerator with maximized power efficiency. The generated solution also specifies computation dataflow, i.e., when and where each computation task is performed. 
 
 To be mentioned, the CNN model has well been designed, trained, and quantified, and is an input of PIMSYN. Hardware synthesis will not cause extra accuracy loss for given CNN algorithms.
@@ -69,7 +69,7 @@ The hardware setup parameters are configured in `config.json`.
 
 ## Citing PIMSYN-NN
 
-[1] Wanqian Li, Xiaotian Sun, Xinyu Wang, Lei Wang, Yinhe Han, Xiaoming Chen, "PIMSYN: Synthesizing Processing-in-memory CNN Accelerators", in Design, Automation and Test in Europe Conference, 2024.
+[1] Wanqian Li, Xiaotian Sun, Xinyu Wang, Lei Wang, Yinhe Han, Xiaoming Chen, ["PIMSYN: Synthesizing Processing-in-memory CNN Accelerators"](https://github.com/lixixi-jook/PIMSYN-NN/tree/main/doc/date24.pdf), in Design, Automation and Test in Europe Conference, 2024. [[Bibtex](https://github.com/lixixi-jook/PIMSYN-NN/tree/main/doc/bibtex.txt)]
 
 ## Code Author
 

@@ -1,0 +1,6 @@
+@inproceedings{PIMSYN-NN,
+  title = {{PIMSYN: Synthesizing Processing-in-memory CNN Accelerators}},
+  booktitle = {2024 Design, Automation and Test in Europe Conference (DATE'24)},
+  author = {Wanqian Li and Xiaotian Sun and Xinyu Wang and Lei Wang and Yinhe Han and Xiaoming Chen},
+  year = {2024},
+}
