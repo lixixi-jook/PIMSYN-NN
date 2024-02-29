@@ -69,7 +69,7 @@ The hardware setup parameters are configured in `config.json`.
 
 ## Citing PIMSYN-NN
 
-[1] Wanqian Li, Xiaotian Sun, Xinyu Wang, Lei Wang, Yinhe Han, Xiaoming Chen, ["PIMSYN: Synthesizing Processing-in-memory CNN Accelerators"](https://github.com/lixixi-jook/PIMSYN-NN/tree/main/doc/date24.pdf), in Design, Automation and Test in Europe Conference, 2024. [[Bibtex](https://github.com/lixixi-jook/PIMSYN-NN/tree/main/doc/bibtex.txt)]
+[1] Wanqian Li, Xiaotian Sun, Xinyu Wang, Lei Wang, Yinhe Han, Xiaoming Chen, ["PIMSYN: Synthesizing Processing-in-memory CNN Accelerators"](https://github.com/lixixi-jook/PIMSYN-NN/tree/main/doc/date24.pdf), in Design, Automation and Test in Europe Conference, 2024. [[Bibtex](https://github.com/lixixi-jook/PIMSYN-NN/tree/main/doc/bibtex.txt)] [[ArXiv](https://arxiv.org/abs/2402.18114)]
 
 ## Code Author
 
